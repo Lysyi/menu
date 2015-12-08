@@ -1,7 +1,6 @@
 $icon-font-path: '../fonts/';
 
 // bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
 .browserupgrade {
@@ -13,12 +12,22 @@ $icon-font-path: '../fonts/';
 
 /* Space out content a bit */
 body {
+  font-family: Tahoma;
 }
 
 ul,li {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }
 
 .nav-wrap {
@@ -63,6 +72,7 @@ ul,li {
 }
 
 .submenu-container {
+  box-sizing: border-box;
   display: none;
   position: absolute;
   width: 100%;
@@ -77,11 +87,17 @@ ul,li {
     right: 15px;
     font-size: 25px;
     color: #90c322;
+    font-style: normal;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 
 .submenu-list {
-  margin: 10px 0 10px -1px;
+  float: left;
+  width: 21%;
+  margin: 0 2% 20px 2%;
   li {
     padding: 0 0 7px 0;
     color: #fff;
